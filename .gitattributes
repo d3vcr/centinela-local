@@ -1,0 +1,4 @@
+# Preserve documentary evidence byte-for-byte; hashes in the CEN-00 manifest
+# are over the incorporated files, including their original line endings.
+.gitattributes -text -eol
+*.md -text -eol
