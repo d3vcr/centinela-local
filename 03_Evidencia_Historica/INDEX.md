@@ -1,6 +1,8 @@
 # Índice de evidencia histórica
 
-Fecha de corte: 2026-07-30
+Fecha de corte inicial: 2026-07-30
+
+Actualización CEN-00R: 2026-07-31
 
 La evidencia de este directorio conserva antecedentes; no los convierte en
 producto vigente ni certificado.
@@ -14,9 +16,7 @@ producto vigente ni certificado.
 - `CENTINELA-FASE-I/NEXO-CENTINELA-v0.2.md`
 - `CENTINELA-FASE-I/NEXO-CENTINELA-10A-IMPLEMENTACION-20260727-004013.md`
 
-Los dos documentos `PHASE_I_*` proceden de archivos `intent-to-add` sin commit
-en el worktree histórico. Su contenido se preserva, pero su certificación está
-pendiente.
+Los dos documentos `PHASE_I_*` fueron cotejados contra su worktree de origen y coinciden byte por byte. Sus entradas de índice siguen apuntando al blob vacío y no existe commit propio; se aceptan como copias verificables históricas, no como componentes certificados o reutilizables.
 
 ## NEXO V2/V3
 
@@ -27,11 +27,21 @@ pendiente.
 
 ## Mac Kubuntu
 
-No se localizó el informe final. Ver `MAC-KUBUNTU/README.md`.
+El informe final permanece `AUSENTE_NO_LOCALIZADA`. El único candidato nominal fue un ZIP que no se abrió ni incorporó. Ver `MAC-KUBUNTU/README.md` y `10_Informes/CEN-00R-INFORME-DE-RECUPERACION.md`.
 
 ## Referencia visual
 
-No se identificó la imagen original. Ver `REFERENCIA-VISUAL/README.md`.
+La referencia original se incorporó sin transformación como `../07_Interfaces/REFERENCIA-DASHBOARD-ORIGINAL.png`. Las capturas de pruebas y previews derivados permanecen rechazados.
+
+## V3-06
+
+El script fuente local se referencia por identidad exacta en `../10_Informes/CEN-00R-INFORME-DE-RECUPERACION.md`; no fue copiado ni ejecutado y su reutilización permanece bloqueada.
+
+## Cierre CEN-00R
+
+- `../01_Fundacion/CEN-00-CIERRE.md`
+- `../09_Roadmap/CEN-00R-ESTADO-Y-GATES.md`
+- `../10_Informes/CEN-00R-INFORME-DE-RECUPERACION.md`
 
 ## Integridad
 

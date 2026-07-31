@@ -1,44 +1,38 @@
 # CEN-00 — Estado
 
-Fecha de corte: 2026-07-30
+Fecha de corte inicial: 2026-07-30
 
-Estado oficial: `CEN-00_ABIERTO_CONTROLADO`
+Fecha de reparación CEN-00R: 2026-07-31
 
-## Hechos observados
+Estado oficial: `CEN-00_CERRADO_CON_AUSENCIAS_CONTROLADAS`
 
-- Rama de trabajo: `docs/centinela-local-cen-00`.
-- Commit de partida: `3b56d11db0f5d74eaf1422fa6f56d42669ea2fbb`.
-- Worktree aislado:
-  `C:\Users\edzab\Documents\NEXO\nexo-centinela-local-cen-00`.
-- El worktree original `nexo-v3-agent` tenía cambios previos y no fue
-  modificado.
-- No hubo acceso a Raspberry Pi, red, SQLite, MQTT, systemd o firmware.
+## Identidad confirmada en CEN-00R
 
-## Fuentes mínimas
+- Repositorio: `C:\Users\edzab\Documents\NEXO\centinela-local`.
+- Rama: `main`.
+- Commit base de reparación: `bbc7568127d4401707539f00d973574629b49ca1`.
+- Remoto: `https://github.com/d3vcr/centinela-local.git`.
+- Estado inicial: sincronizado con `origin/main`, worktree limpio y 44 archivos rastreados.
 
-| # | Fuente | Estado |
+## Resolución de pendientes
+
+| # | Condición | Resultado CEN-00R |
 |---:|---|---|
-| 1 | Roadmap vigente NEXO V3 | Incorporada desde baseline local; vigencia remota no comprobada |
-| 2 | Arquitectura vigente NEXO V3 | Incorporada desde baseline local; runtime no comprobado |
-| 3 | `AGENTS.md` NEXO V3 | Incorporada desde el commit de partida |
-| 4 | Documentación Fase I Centinela | Incorporada con advertencia: procede de archivos intent-to-add sin commit |
-| 5 | Documentación V3-06 | No existe como fuente dedicada; se creó una síntesis `PROPUESTO` |
-| 6 | Informe final Mac con Kubuntu | Faltante |
-| 7 | Imagen original de referencia | Faltante; candidatos locales no se sustituyeron |
-| 8 | Resumen vigente V2/V3 | Síntesis documental creada; runtime actual no verificado |
+| 1 | Informe final Mac Kubuntu | `AUSENTE_NO_LOCALIZADA`; ausencia controlada. El único candidato fue un ZIP no abierto ni incorporado |
+| 2 | Imagen original del dashboard | `CONFIRMADO`; fuente visual original incorporada sin conversión ni redimensión |
+| 3 | Fuente Phase I | `CONFIRMADO_CON_LIMITACIONES`; dos documentos primarios locales coinciden byte por byte con las copias, pero siguen sin commit propio |
+| 4 | Fuente V3-06 | `CONFIRMADO_CON_LIMITACIONES`; script local identificado por dos copias idénticas y sidecar, referenciado pero no incorporado |
+| 5 | Vigencia V2/V3 | `DOCUMENTADO`; V2 histórico/operativo de referencia y V3 línea oficial local; operación actual no verificada |
+| 6 | Declaración formal | `CONFIRMADO`; emitida en `01_Fundacion/CEN-00-CIERRE.md` |
 
-## Gates que impiden el cierre
+## Límites conservados
 
-1. Falta el informe final de la Mac con Kubuntu.
-2. Falta identificar e incorporar la imagen original de referencia.
-3. La fuente de Fase I no tiene commit propio y requiere aceptación de
-   procedencia o una versión certificada.
-4. La vigencia completa del estado operativo V2/V3 no fue verificada y CEN-00
-   no autoriza acceso remoto.
-5. La documentación dedicada de V3-06 es una síntesis, no una fuente
-   independiente preexistente.
+- Las ausencias no se sustituyen por inferencias.
+- Ningún componente histórico se declara reutilizable o certificado.
+- El estado operativo de la Raspberry Pi permanece `NO_VERIFICADO`.
+- No se habilitan MQTT de control, relés, arranque, firmware, SQLite productiva, systemd, calibración ni odómetro.
+- Runtime, Engineer, observación y administración permanecen separados.
 
 ## Dictamen
 
-La fundación puede mantenerse abierta y controlada. No se autoriza
-`CEN-00_CERRADO` ni el inicio de `CEN-01`.
+CEN-00 queda cerrado con ausencias controladas. CEN-01 permanece cerrado. La única autorización posterior es `CEN-02_AUTORIZADO_SOLO_PARA_DISENO_DOCUMENTAL`; no se autoriza implementación.

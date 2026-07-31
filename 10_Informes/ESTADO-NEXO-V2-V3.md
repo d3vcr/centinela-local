@@ -1,6 +1,8 @@
 # Estado documental NEXO V2/V3
 
-Fecha de corte documental: 2026-07-30
+Fecha de corte inicial: 2026-07-30
+
+Revalidación documental CEN-00R: 2026-07-31
 
 Clasificación: `DOCUMENTADO` a partir del repositorio local. No equivale a
 estado operativo actual.
@@ -15,6 +17,8 @@ y no pueden usarse solas como baseline actual.
 `NO_DETERMINABLE` en CEN-00: servicios activos, puertos, rutas efectivas,
 SQLite oficial, escritor de odómetro y carga real de la Pi.
 
+`DOCUMENTADO` en CEN-00R: el repositorio local `nexo` estaba en rama `codex/nexo-rebuild-phase-e`, HEAD `bc6299a5a83f1dfe3c6723f1069ea8b15be8bd00`, remoto configurado `https://github.com/d3vcr/nexo-ecu.git`. Los documentos `docs/ESTADO_NEXO.md` y `docs/NEXO-ESTADO.md` tienen último commit relacionado `8a134861729a0594dec197e98574bd7ca3d0dded` del 2026-07-10. Se mantienen como referencia operativa e histórica; no prueban estado actual.
+
 ## NEXO V3
 
 `OBSERVADO` en el repositorio local del commit `3b56d11`:
@@ -26,6 +30,8 @@ SQLite oficial, escritor de odómetro y carga real de la Pi.
 - existen implementaciones locales de ingesta, normalización, API, sessionizer,
   Centinela y Cockpit;
 - la arquitectura marca como pendiente todo lo que depende de la Pi.
+
+`DOCUMENTADO_VIGENTE_COMO_LINEA_OFICIAL_LOCAL` en CEN-00R: el repositorio `nexo-v3-agent` estaba en rama `setup/nexo-v3-agent`, HEAD `3b56d11db0f5d74eaf1422fa6f56d42669ea2fbb`, remoto configurado `https://github.com/d3vcr/nexo-ecu.git`. El roadmap y `AGENTS.md` coinciden byte por byte con las referencias incorporadas. La arquitectura coincide en contenido al normalizar CRLF/LF; el hash normalizado común es `801d56e3a40b4f6a3fd3526e656db48b76824df197374a19e5cae426d906ed6a`.
 
 `DOCUMENTADO`: `apps/centinela` es un observador read-only; V3-06 prevé integrar
 un administrador con Ruff, Mypy, pruebas, catálogo permitido, confirmación y
@@ -49,7 +55,4 @@ MQTT bloqueado.
 
 ## Conclusión
 
-El baseline documental permite diseñar CENTINELA LOCAL, pero el estado
-operativo V2/V3 sigue `NO_VERIFICADO_EN_CEN-00`. Una validación posterior
-requerirá autorización read-only específica y no puede inferirse de la Pi
-encendida ni de documentos históricos.
+La vigencia documental queda resuelta de forma conservadora: NEXO V2 es referencia operativa e histórica documentada; NEXO V3 es la línea oficial local de integración y evolución. El estado operativo de ambos sigue `NO_VERIFICADO_EN_CEN-00R`. No se declara que la Raspberry Pi ejecute V3.
