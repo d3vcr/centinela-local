@@ -1,0 +1,30 @@
+[Unit]
+Description=NEXO Admin + Centinela v2 local readonly panel
+After=network-online.target nexo-api.service nexo-centinela.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=d3v3lop3rs
+Group=nexo
+WorkingDirectory=/opt/nexo/admin
+Environment=PYTHONUNBUFFERED=1
+Environment=NEXO_ADMIN_STATE_DIR=/var/lib/nexo/admin
+ExecStart=/usr/bin/python3 -B /opt/nexo/admin/nexo_admin_centinela_v2.py serve --host 127.0.0.1 --port 8190
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/nexo/admin
+LockPersonality=true
+RestrictSUIDSGID=true
+RestrictRealtime=true
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
