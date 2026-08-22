@@ -1,24 +1,33 @@
 # CENTINELA LOCAL
 
-Baseline documental de `CEN-00`.
+Baseline documental y runtime verificable de CENTINELA.
 
-Estado oficial: `CEN-00_ABIERTO_CONTROLADO` + sincronización de runtime `2026-08-17`.
+**Estado auditado:** `RUNTIME_IMPLEMENTADO + SINCRONIZACION_PENDIENTE + INTEGRACION_DOCUMENTAL_PENDIENTE`
 
-Este árbol conserva la carta fundacional, clasifica fuentes y fija límites
-verificables, y desde el 2026-08-17 incorpora también el **runtime de CENTINELA
-en ejecución en producción** (ver `04_Centinela_Runtime/current/`) como
-referencia verificable y **exclusiva de CENTINELA** (sin código de NEXO ECU,
-firmware, cockpit, MQTT, odómetro ni herramientas ajenas).
+La rama `main` contiene un snapshot real del runtime de CENTINELA sincronizado desde `motoguarana` el 2026-08-17, incluyendo módulos Python, panel administrativo v2, systemd, scripts de deploy/rollback y manifiesto SHA-256.
+
+## Fuente de verdad actual
+
+- Repositorio: `d3vcr/centinela-local`
+- Rama: `main`
+- Snapshot de runtime: 2026-08-17
+- Última actualización documental: 2026-08-21
+- Último commit: `2923de1`
 
 ## Lectura inicial
 
-1. `01_Fundacion/CEN-00-CARTA-FUNDACIONAL.md`
-2. `01_Fundacion/CEN-00-ESTADO.md`
-3. `01_Fundacion/CEN-00-FUENTES-Y-PROCEDENCIA.md`
-4. `03_Evidencia_Historica/MANIFEST-SHA256.md`
-5. `10_Informes/CEN-00-INFORME-INICIAL.md`
-6. `04_Centinela_Runtime/README.md` — runtime en ejecución (snapshot 2026-08-17)
-7. `04_Centinela_Runtime/EVIDENCIA-SINCRONIZACION-20260817.md` — procedencia y estado
+1. `01_Fundacion/` — carta, estado y procedencia.
+2. `04_Centinela_Runtime/` — runtime real sincronizado desde producción.
+3. `08_Pruebas/` — pruebas y evidencia.
+4. `09_Roadmap/` — gates y fases.
+5. `10_Informes/CEN-ESTADO-COTEJO-20260821.md` — **cotejo actualizado de implementado vs pendiente**.
 
-No se autoriza iniciar `CEN-01` mientras el estado no cambie mediante una
-revisión documental explícita.
+## Importante: frontera con NEXO
+
+Este repositorio conserva exclusivamente CENTINELA LOCAL. No se debe copiar aquí código de ECU, firmware ESP32, MQTT productivo, cockpit, odómetro o lógica general de NEXO.
+
+Las capacidades implementadas recientemente fuera de esta repo —por ejemplo voz/audio y pruebas de integración— deben registrarse como **implementadas fuera del repo** hasta que el runtime desplegado sea cotejado por archivo, origen y SHA-256.
+
+## Próximo paso
+
+Actualizar el snapshot desde el runtime real de `motoguarana`, comparar hashes contra `04_Centinela_Runtime/current/`, registrar cambios y sólo entonces declarar sincronizada la nueva versión.
